@@ -28,6 +28,8 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
 </head>
 
 
@@ -310,13 +312,13 @@
         <div class="brand">
             <div class="title center-align">
                 
-                    胆小认生,不易相处
+                    subtitle
                 
             </div>
 
             <div class="description center-align">
                 
-                    This is your root _config.yml 'description' value.
+                    <span id="jinrishici-sentence">正在加载今日诗词....</span>
                 
             </div>
         </div>
@@ -326,6 +328,7 @@
 // 每天切换 banner 图.  Switch banner image every day.
 $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
+
 
             <div class="cover-btns">
                 <a href="#indexCard" class="waves-effect waves-light btn">
@@ -410,18 +413,8 @@ $(function () {
             <div class="card">
                 <div class="card-content">
                     
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;我的梦想
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
-        </div>
-    </div>
-</div>
+                        <i class="fa fa-volume-up fa-lg fa-fw text-color"></i>
+                        <span id="hitokoto">一言API请求超时。请稍后重试。</span> （来源：一言API）
                     
 
                     
@@ -1102,10 +1095,8 @@ Spring Boot 框架内容
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">
-        <div class="col s12 m8 l8 copy-right">
-            本站由&copy;<a href="https://blinkfox.github.io/" target="_blank">Blinkfox</a>基于
-            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
-            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+        <div class="col s12 m10 l10 copy-right">
+            &copy;<a href="https://taopixiang.github.io/" target="_blank">Tao</a>的博客
 
             
 
@@ -1126,7 +1117,7 @@ Spring Boot 框架内容
                 
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m2 l2 social-link social-statis">
     <a href="https://github.com/taopixiang" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fa fa-github"></i>
     </a>

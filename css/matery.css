@@ -26,11 +26,17 @@
         max-width: 1250px;
     }
 }
-
+/*
 body {
     background-color: #eaeaea;
     margin: 0;
     color: #34495e;
+}
+*/
+body {
+    background-color: #212121;
+    margin: 0;
+    color: #3e2723;
 }
 
 h1 {
